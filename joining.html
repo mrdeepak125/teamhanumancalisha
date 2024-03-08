@@ -5,10 +5,18 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joining form</title>
   <link rel="stylesheet" href="joining.css" />
-  
+  <link rel="stylesheet" href="loading.css">
 </head>
 <body>
-
+   <div id="preloader">
+      <div id="container">
+          <div id="ring"></div>
+          <div id="ring"></div>
+          <div id="ring"></div>
+          <div id="ring"></div>
+          <div id="h3">loading</div>
+      </div>
+  </div>
 <div class="container">
       <div class="text">
          Joining Form
@@ -51,8 +59,8 @@
             </div>
       </div>
          <div class="form-row">
-            <div class="input-data" id="Location" required>
-                  <select class="ih-inp-style" name="Location" id="Location" fdprocessedid="krz9hk">
+            <div class="input-data" id="Location">
+                  <select class="ih-inp-style" name="Location" id="Location" fdprocessedid="krz9hk" >
                      <!-- 1 -->
                     <option value="ब्रह्मपुरी">
                       ब्रह्मपुरी
@@ -146,11 +154,11 @@
                         मीठी कोठी
                      </option>
                      <!-- 24 -->
-                     <option value="OTHER">
+                     <!-- <option value="OTHER">
                      OTHER
-                     </option>
-                    <!-- 25 -->
-<!--                      <option value="">
+                     </option> -->
+                     <!-- 25 -->
+                     <!-- <option value="">
                      
                      </option> -->
                      <!-- 26 -->
@@ -167,13 +175,13 @@
                      </option> -->
                   </select>
                <div class="underline"></div>
-               <label></label>
+               <label>Location</label>
             </div>
          <div class="input-data textarea">
-            <textarea rows="8" cols="80"name="Address" ></textarea>
+            <textarea rows="8" cols="80"name="Address" required></textarea>
             <br />
             <div class="underline"></div>
-            <label  >Any other Address</label>
+            <label  >Write your Address</label>
             <br />
             <div class="form-row submit-btn">
             </div>
@@ -211,6 +219,6 @@
                 .catch(error => console.error('Error!', error.message))
             })
   </script>
-  
+  <script src="loder.js"></script>
 </body>
 </html>

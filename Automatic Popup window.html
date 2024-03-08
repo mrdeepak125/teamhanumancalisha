@@ -7,6 +7,7 @@
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <!--Stylesheets-->
+    <link rel="stylesheet" href="loading.css">
     <style media="screen">
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
@@ -36,6 +37,7 @@ body{
     background-position-x: -4rem;
     background-size: 2352px;
 }
+
 .popup{
     position: absolute;
     transform: translate(-50%,-50%);
@@ -201,6 +203,15 @@ a{
     </style>
 </head>
 <body>
+  <div id="preloader">
+    <div id="container">
+        <div id="ring"></div>
+        <div id="ring"></div>
+        <div id="ring"></div>
+        <div id="ring"></div>
+        <div id="h3">loading</div>
+    </div>
+</div>
     <div class="popup">
 
         <div class="tc_main">
@@ -239,6 +250,7 @@ a{
 </div>
 
     <!--Script-->
+    <script src="loder.js"></script>
     <script type="text/javascript">
 window.addEventListener("load", function(){
     setTimeout(
@@ -248,8 +260,6 @@ window.addEventListener("load", function(){
         1000 
     )
 });
-
-
 document.querySelector("#close").addEventListener("click", function(){
     document.querySelector(".popup").style.display = "none";
 });
